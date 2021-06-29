@@ -1,0 +1,27 @@
+include ./header
+include ./nav1
+include ./main1
+
+
+.container-fluid
+    .row
+        .col-xs-12
+            .main4
+                .title1
+                    p 文章编辑
+                .title2.clearfix
+                    .classify.pull-left.clearfix
+                        .list.pull-left 文章分类
+                        select.pull-left
+                            option(value="vue") vue
+                            option(value="vue") vue
+                            option(value="vue") vue
+                            option(value="vue") vue
+                    .text.pull-right.clearfix
+                        span.pull-left 标题
+                        input(class="pull-left")
+                .rich-text
+                button(type='') 立即发布
+
+
+include ./footer

@@ -1,0 +1,21 @@
+extends layout.pug
+
+block css
+  link(href='../bootstrap/css/bootstrap.css' rel="stylesheet")
+  link(href='../font_icon/iconfont.css' rel="stylesheet")
+  link(href='../css/style.css' rel="stylesheet")
+block scripts
+  script(src='../js/jquery.min.js')
+  
+block header
+  include nav1.pug
+
+block content
+  h1(style="text-align:center;color:red;margin-top:50px")= status
+  h1(style="text-align:center;margin-top:10px") 即将跳转
+
+block foot
+  script.
+    setTimeout(() => {
+      location.href = "/"
+    }, 3000)

@@ -1,0 +1,35 @@
+
+.data
+    .nav
+        a(class="check_all") 全选
+        a(class="Invert_Selection") 反选
+        a(class="deselect") 取消选择
+        a(class="o_delete") 删除
+    table
+        tr
+            th 选择
+            th 文章
+            th 分类
+            th 评论数
+            th 操作
+        tr
+            td.fx
+                i
+                input(type='checkbox')
+            td 赵氏集团
+            td vue
+            td 100
+            td
+                a(class="a_delete") 删除
+
+
+    //- 警告弹窗
+    .Warning
+        h5 友情提示：
+        p 您确定要删除？
+        ul
+            li.confirm 确定
+            li.cancel 取消
+
+    //- 警告弹窗2
+    .Warning2 请先选择项目

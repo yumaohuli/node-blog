@@ -1,0 +1,31 @@
+extends layout.pug
+
+block header
+block content
+    .main5
+        nav
+            .container-fluid
+                .row
+                    .col-xs-12.clearfix
+                        ul.clearfix.pull-left
+                            li.pull-left
+                                a(href="#") 首页
+                        .login.pull-right
+                            a(href="#") 退出
+        .main5-con
+            .main5-left
+                ul
+                    li
+                        a(href="wzgl.asp" target="con_iframe" class="active") 文章管理
+                    li
+                        a(href="plgl.asp" target="con_iframe") 评论管理
+                    li
+                        a(href="txsc.asp" target="con_iframe") 头像上传
+            .main5-right
+                .main5-con-table
+                    include plgl.pug
+block foot
+    script(src='js/zhao.js')
+                            
+                    
+                

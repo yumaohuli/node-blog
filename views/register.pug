@@ -1,0 +1,66 @@
+extends layout.pug
+block css
+    link(href='../bootstrap/css/bootstrap.css' rel="stylesheet")
+    link(href='../font_icon/iconfont.css' rel="stylesheet")
+    link(href='../css/style.css' rel="stylesheet")
+block scripts
+    script(src='../js/jquery.min.js')
+
+//- 复用内容
+mixin userinfo
+    .list.clearfix
+        span.pull-left 用户名
+        input(
+            class="pull-left"
+            type='text'
+            name="username"
+            required
+            placeholder="请输入用户名"
+        )
+    .list.clearfix
+        span.pull-left 密码
+        input(
+            class="pull-left"
+            type='password'
+            name="password"
+            required
+            placeholder="请输入密码"
+        )
+
+mixin btn(title)
+    .list.but
+        button(type='submit') #{title}
+        button(type='reset') 重置
+
+block content
+    .container-fluid
+        .row
+            .col-xs-12
+                .main3
+                    .title
+                        ul.clearfix
+                            li(class=show?"pull-left":"pull-left active")
+                                a(href="/user/login") 用户登录
+                            li(class=show?"pull-left active":"pull-left")
+                                a(href="/user/reg") 用户注册
+                    .form-box
+                        form(class=show?"":"active",action="/user/login",method="POST")
+                            +userinfo
+                            +btn('立即提交')
+                        form(class=show?"active":"",action="/user/reg",method="POST")
+                            +userinfo
+                            .list.clearfix
+                                span.pull-left 确认密码
+                                input(
+                                    class="pull-left"
+                                    type='password'
+                                    name="confirmPWD"
+                                    required
+                                    placeholder="确认密码"
+                                )
+                            +btn('立即提交')
+block foot
+    footer 2021 博客系统
+    script(src='../bootstrap/js/bootstrap.min.js')
+    script(src='../js/ie10-viewport-bug-workaround.js')
+    script(src='../js/zhao.js')               
